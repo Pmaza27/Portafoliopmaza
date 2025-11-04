@@ -111,7 +111,7 @@ APPLICATIONS = [
         "icon": "📝",
         "description": "Convierte archivos de audio o voz en tiempo real a texto editable con alta precisión.",
         "image": "images/speech_to_text.png",
-        "link": "https://ficticio.app/stt"
+        "link": "https://texttoaudiopjmu.streamlit.app/"
     },
     {
         "title": "Reconocimiento de Objetos",
