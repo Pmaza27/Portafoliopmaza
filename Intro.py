@@ -97,7 +97,7 @@ APPLICATIONS = [
         "icon": "",
         "description": ".",
         "image": "images/text_to_speech.png",
-        "link": "https://ficticio.app/tts"
+        "link": "https://intropmaza.streamlit.app/"
     },
     {
         "title": "Conversión de Texto a Voz (TTS)",
