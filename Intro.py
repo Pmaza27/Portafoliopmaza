@@ -1,87 +1,229 @@
 import streamlit as st
-from PIL import Image
-st.title("Aplicaciones de Inteligencia Artificial.")
 
+# --- Configuración de la Página ---
+st.set_page_config(
+    page_title="Portafolio IA",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# --- CSS Personalizado para Tema Oscuro Moderno y Tarjetas ---
+custom_css = """
+<style>
+/* 1. Estilo General - Tema Oscuro Minimalista */
+.stApp {
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #f0f0f0; /* Texto claro */
+}
+
+/* 2. Encabezado Principal */
+h1 {
+    color: #4CAF50; /* Color de acento para el título principal */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #333333;
+}
+
+/* 3. Estilo de la Tarjeta de Aplicación (El corazón del diseño) */
+.app-card {
+    background-color: #2c2c2c; /* Fondo de la tarjeta un poco más claro que el fondo principal */
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    transition: all 0.3s ease-in-out; /* Transición para el efecto hover */
+    height: 100%; /* Asegura que todas las tarjetas sean del mismo tamaño verticalmente */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efecto Hover para la Tarjeta */
+.app-card:hover {
+    transform: translateY(-5px); /* Animación ligera al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada al hacer hover */
+    border: 1px solid #4CAF50; /* Borde de acento */
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.app-card img {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    height: 150px; /* Altura fija para la imagen */
+    object-fit: cover; /* Ajuste para cubrir el área sin deformar */
+}
+
+/* Estilo para el botón dentro de la tarjeta */
+.stButton>button {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    margin-top: auto; /* Empuja el botón hacia la parte inferior de la tarjeta */
+}
+
+/* 4. Estilo de la Barra Lateral */
+.stSidebar {
+    background-color: #121212 !important; /* Sidebar más oscuro */
+    border-right: 1px solid #333333;
+    padding: 20px;
+}
+
+/* 5. Footer Discreto */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1e1e1e;
+    color: #555555;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+    border-top: 1px solid #333333;
+}
+</style>
+"""
+st.markdown(custom_css, unsafe_allow_html=True)
+
+
+# --- 📌 Definición de las Aplicaciones ---
+# Usamos un diccionario para mantener la información limpia y escalable
+APPLICATIONS = [
+    {
+        "title": "Conversión de Texto a Voz (TTS)",
+        "icon": "🎙️",
+        "description": "Transforma cualquier texto escrito en un audio de voz natural y realista.",
+        "image": "images/text_to_speech.png",
+        "link": "https://ficticio.app/tts"
+    },
+    {
+        "title": "Conversión de Voz a Texto (STT)",
+        "icon": "📝",
+        "description": "Convierte archivos de audio o voz en tiempo real a texto editable con alta precisión.",
+        "image": "images/speech_to_text.png",
+        "link": "https://ficticio.app/stt"
+    },
+    {
+        "title": "Reconocimiento de Objetos",
+        "icon": "👀",
+        "description": "Identifica, localiza y clasifica múltiples objetos dentro de una imagen o stream de video.",
+        "image": "images/object_recognition.png",
+        "link": "https://ficticio.app/objetos"
+    },
+    {
+        "title": "Análisis de Datos Avanzado",
+        "icon": "📊",
+        "description": "Descubre patrones ocultos y genera visualizaciones interactivas a partir de tus datasets.",
+        "image": "images/data_analysis.png",
+        "link": "https://ficticio.app/analisis"
+    },
+    {
+        "title": "Generación en Contexto (RAG)",
+        "icon": "📚",
+        "description": "Mejora los LLM conectándolos a fuentes de conocimiento externas y fiables.",
+        "image": "images/rag.png",
+        "link": "https://ficticio.app/rag"
+    },
+    {
+        "title": "Transcriptor de Audio y Video",
+        "icon": "🎬",
+        "description": "Automatiza la transcripción de contenido multimedia largo con sello de tiempo (timestamps).",
+        "image": "images/video_audio_transcriber.png",
+        "link": "https://ficticio.app/transcriptor"
+    },
+    {
+        "title": "Análisis de Imagen (Visión por Computadora)",
+        "icon": "🖼️",
+        "description": "Clasifica, segmenta y extrae información valiosa de cualquier archivo de imagen.",
+        "image": "images/image_analysis.png",
+        "link": "https://ficticio.app/analisis_img"
+    },
+    {
+        "title": "Entrenamiento de Modelos (MLOps)",
+        "icon": "🧠",
+        "description": "Plataforma para configurar, entrenar y desplegar tus propios modelos de Machine Learning.",
+        "image": "images/model_training.png",
+        "link": "https://ficticio.app/entrenamiento"
+    },
+    {
+        "title": "Sistema Ciberfísico (CPS)",
+        "icon": "🏭",
+        "description": "Simulación y control de sistemas donde lo computacional y lo físico interactúan en tiempo real.",
+        "image": "images/cyberphysical_system.png",
+        "link": "https://ficticio.app/cps"
+    }
+]
+
+
+# --- 💡 Menú Lateral (Sidebar) ---
 with st.sidebar:
-  st.subheader("Aplicaciones con Inteligencia Artificial.")
-  parrafo = (
-    "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
-    "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
-    "resulta en una mayor eficiencia y precisión en diversos campos."
-  )
-  st.write(parrafo)
-
-url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
-st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
-st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
-col1, col2, col3 = st.columns(3)
-
-with col1:
- 
- st.subheader("Conversión de texto a voz")
- image = Image.open('txt_to_audio2.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace usaremos una de las aplicaciones de Inteligencia Artificial") 
- url = "https://imultimod.streamlit.app/"
- st.write(f"Texto a voz: [Enlace]({url})")
-
- st.subheader("Reconocimiento de Objetos")
- image = Image.open('txt_to_audio.png')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como se detectan objetos en Imágenes.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
-
- st.subheader("Entrenando Modelos")
- image = Image.open('OIG5.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como puedes usar tu modelo entrenado.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
-
-with col2: 
- st.subheader("Conversión de voz a texto")
- image = Image.open('OIG8.jpg')
- st.image(image, width=200)
- st.write("En la siguiente veremos una aplicación que usa la conversión de voz a texto.") 
- url = "https://traductor-ab0sp9f6fi.streamlit.app/"
- st.write(f"Voz a texto: [Enlace]({url})")
-
- st.subheader("Análisis de Datos")
- image = Image.open('data_analisis.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace veremos como se pueden analizar datos usando agentes.") 
- url = "https://asistpy-csv.streamlit.app/"
- st.write(f"Datos: [Enlace]({url})")
-
- st.subheader("Trasnscriptor Audio y Video")
- image = Image.open('OIG3.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como realizamos transcripciones de audio/video.") 
- url = "https://transcript-whisper.streamlit.app/"
- st.write(f"Transcriptor: [Enlace]({url})")
+    st.image("https://upload.wikimedia.org/wikipedia/commons/e/e0/Ai_icon.svg", width=150) # Icono de IA (usando URL pública como ejemplo)
+    st.markdown("---")
+    st.subheader("🤖 ¿Qué es la Inteligencia Artificial?")
+    st.markdown("""
+        La **Inteligencia Artificial (IA)** es un campo de la informática que se enfoca en crear **sistemas capaces de razonar, aprender y actuar** de forma autónoma.
+        
+        Implica la construcción de **algoritmos** y modelos que permiten a las máquinas realizar tareas que normalmente requieren inteligencia humana, desde el reconocimiento de patrones hasta la toma de decisiones complejas.
+        
+        Explora nuestro catálogo de aplicaciones basadas en IA.
+    """)
+    st.markdown("---")
+    st.info("💡 **Tip:** Usa `st.columns` para una disposición visualmente atractiva.")
 
 
-with col3: 
- st.subheader("Generación en Contexto")
- image = Image.open('Chat_pdf.png')
- st.image(image, width=190)
- st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
- url = "https://chatpdf-cc.streamlit.app/"
- st.write(f"RAG: [Enlace]({url})")
+# --- 🌐 Contenido Principal ---
 
- st.subheader("Análisis de Imagen")
- image = Image.open('OIG4.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de análisis en Imágenes.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
- 
- st.subheader("Sistema Ciberfísico")
- image = Image.open('OIG6.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de interacción con el mundo físico.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
+st.title("Aplicaciones de Inteligencia Artificial")
+
+# 1. Función para crear la tarjeta de aplicación
+def create_app_card(app):
+    """Crea una tarjeta de aplicación con la estructura HTML/CSS personalizada."""
+    # Usamos st.markdown para inyectar la estructura HTML de la tarjeta
+    card_html = f"""
+    <div class="app-card">
+        <img src="{app['image']}" alt="{app['title']}" />
+        <h3 style="color: #f0f0f0; margin-top: 0px;">{app['icon']} {app['title']}</h3>
+        <p style="color: #cccccc;">{app['description']}</p>
+        <a href="{app['link']}" target="_blank" style="text-decoration: none; margin-top: auto;">
+            <button style="
+                width: 100%; 
+                padding: 10px; 
+                border-radius: 8px; 
+                border: none; 
+                background-color: #4CAF50; 
+                color: white; 
+                font-weight: bold;
+                cursor: pointer;
+            ">
+                Explorar Aplicación
+            </button>
+        </a>
+    </div>
+    """
+    st.markdown(card_html, unsafe_allow_html=True)
 
 
+# 2. Creación de las tarjetas usando Columnas (3 por fila)
+N_COLUMNS = 3
+cols = st.columns(N_COLUMNS)
+col_index = 0
+
+for app in APPLICATIONS:
+    # Usar el índice de columna actual
+    with cols[col_index]:
+        # Dentro de cada columna, renderizar la tarjeta
+        create_app_card(app)
+    
+    # Avanzar al siguiente índice (ciclo 0, 1, 2, 0, 1, 2...)
+    col_index = (col_index + 1) % N_COLUMNS
+
+
+# --- 🦶 Footer Discreto ---
+st.markdown("""
+    <div class="footer">
+        Creado con ❤️ usando Streamlit
+    </div>
+""", unsafe_allow_html=True)
