@@ -93,6 +93,13 @@ st.markdown(custom_css, unsafe_allow_html=True)
 # Usamos un diccionario para mantener la información limpia y escalable
 APPLICATIONS = [
     {
+        "title": "Intro",
+        "icon": "",
+        "description": ".",
+        "image": "images/text_to_speech.png",
+        "link": "https://ficticio.app/tts"
+    },
+    {
         "title": "Conversión de Texto a Voz (TTS)",
         "icon": "🎙️",
         "description": "Transforma cualquier texto escrito en un audio de voz natural y realista.",
