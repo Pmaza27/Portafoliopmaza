@@ -192,10 +192,10 @@ APPLICATIONS = [
     }, 
     {
         "title": "Control Voz MQTT ",
-        "icon": "🏭",
+        "icon": "🎙️",
         "description": ".",
         "image": "images/cyberphysical_system.png",
-        "link": "https://ficticio.app/cps"
+        "link": "https://ctrlvoicepmaza.streamlit.app/"
     }
     
 ]
