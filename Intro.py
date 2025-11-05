@@ -94,8 +94,8 @@ st.markdown(custom_css, unsafe_allow_html=True)
 APPLICATIONS = [
     {
         "title": "Intro",
-        "icon": "Primera app.",
-        "description": ".",
+        "icon": "👀",
+        "description": "Primera app.",
         "image": "images/text_to_speech.png",
         "link": "https://intropmaza.streamlit.app/"
     },
