@@ -114,54 +114,90 @@ APPLICATIONS = [
         "link": "https://traductorpjmu.streamlit.app/"
     },
     {
-        "title": "Reconocimiento de Objetos",
-        "icon": "👀",
-        "description": "Identifica, localiza y clasifica múltiples objetos dentro de una imagen o stream de video.",
+        "title": "Interfaz OCR",
+        "icon": "📹",
+        "description": "Digitaliza documentos e imágenes instantáneamente. Esta aplicación utiliza visión por computadora y modelos de IA para extraer texto editable de cualquier imagen o PDF con precisión. Ideal para automatizar la entrada de datos y convertir archivos estáticos en información dinámica.".",
         "image": "images/object_recognition.png",
         "link": "https://ficticio.app/objetos"
     },
     {
-        "title": "Análisis de Datos Avanzado",
+        "title": "Análisis de Sentimiento",
         "icon": "📊",
         "description": "Descubre patrones ocultos y genera visualizaciones interactivas a partir de tus datasets.",
         "image": "images/data_analysis.png",
         "link": "https://ficticio.app/analisis"
     },
     {
-        "title": "Generación en Contexto (RAG)",
+        "title": "Analisis de texto inglés)",
         "icon": "📚",
-        "description": "Mejora los LLM conectándolos a fuentes de conocimiento externas y fiables.",
+        "description": ".",
         "image": "images/rag.png",
         "link": "https://ficticio.app/rag"
     },
     {
-        "title": "Transcriptor de Audio y Video",
+        "title": "Analisis de texto español",
         "icon": "🎬",
-        "description": "Automatiza la transcripción de contenido multimedia largo con sello de tiempo (timestamps).",
+        "description": ".",
         "image": "images/video_audio_transcriber.png",
         "link": "https://ficticio.app/transcriptor"
     },
     {
-        "title": "Análisis de Imagen (Visión por Computadora)",
+        "title": "Reconocimiento de gestos (Yolo",
         "icon": "🖼️",
         "description": "Clasifica, segmenta y extrae información valiosa de cualquier archivo de imagen.",
         "image": "images/image_analysis.png",
         "link": "https://ficticio.app/analisis_img"
     },
     {
-        "title": "Entrenamiento de Modelos (MLOps)",
+        "title": "Reconocimiento de objetos",
         "icon": "🧠",
-        "description": "Plataforma para configurar, entrenar y desplegar tus propios modelos de Machine Learning.",
+        "description": "",
         "image": "images/model_training.png",
         "link": "https://ficticio.app/entrenamiento"
     },
     {
-        "title": "Sistema Ciberfísico (CPS)",
+        "title": "Chat PDF",
         "icon": "🏭",
-        "description": "Simulación y control de sistemas donde lo computacional y lo físico interactúan en tiempo real.",
+        "description": ".",
+        "image": "images/cyberphysical_system.png",
+        "link": "https://ficticio.app/cps"
+    },   
+    {
+        "title": "Imagen to text",
+        "icon": "🏭",
+        "description": ".",
+        "image": "images/cyberphysical_system.png",
+        "link": "https://ficticio.app/cps"
+    },
+    {
+        "title": "Reconomiento de Tablero ",
+        "icon": "🏭",
+        "description": ".",
+        "image": "images/cyberphysical_system.png",
+        "link": "https://ficticio.app/cps"
+    },
+    {
+        "title": "Apliación Tablero ",
+        "icon": "🏭",
+        "description": ".",
+        "image": "images/cyberphysical_system.png",
+        "link": "https://ficticio.app/cps"
+    },  
+    {
+        "title": "Control MQTT ",
+        "icon": "🏭",
+        "description": ".",
+        "image": "images/cyberphysical_system.png",
+        "link": "https://ficticio.app/cps"
+    }, 
+    {
+        "title": "Control Voz MQTT ",
+        "icon": "🏭",
+        "description": ".",
         "image": "images/cyberphysical_system.png",
         "link": "https://ficticio.app/cps"
     }
+    
 ]
 
 
