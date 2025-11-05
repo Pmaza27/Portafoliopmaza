@@ -94,7 +94,7 @@ st.markdown(custom_css, unsafe_allow_html=True)
 APPLICATIONS = [
     {
         "title": "Intro",
-        "icon": "",
+        "icon": "Primera app.",
         "description": ".",
         "image": "images/text_to_speech.png",
         "link": "https://intropmaza.streamlit.app/"
@@ -104,14 +104,14 @@ APPLICATIONS = [
         "icon": "🎙️",
         "description": "Transforma cualquier texto escrito en un audio de voz natural y realista.",
         "image": "images/text_to_speech.png",
-        "link": "https://ficticio.app/tts"
+        "link": "https://texttoaudiopjmu.streamlit.app/"
     },
     {
         "title": "Conversión de Voz a Texto (STT)",
         "icon": "📝",
         "description": "Convierte archivos de audio o voz en tiempo real a texto editable con alta precisión.",
         "image": "images/speech_to_text.png",
-        "link": "https://texttoaudiopjmu.streamlit.app/"
+        "link": "https://traductorpjmu.streamlit.app/"
     },
     {
         "title": "Reconocimiento de Objetos",
