@@ -174,14 +174,14 @@ APPLICATIONS = [
         "icon": "🏭",
         "description": ".",
         "image": "images/cyberphysical_system.png",
-        "link": "https://ficticio.app/cps"
+        "link": "https://tableropjmu.streamlit.app/"
     },
     {
         "title": "Apliación Tablero ",
         "icon": "🏭",
         "description": ".",
         "image": "images/cyberphysical_system.png",
-        "link": "https://ficticio.app/cps"
+        "link": "https://tablerointeligente-w9afexj9dbqdpqf92qef7m.streamlit.app/"
     },  
     {
         "title": "Control MQTT ",
