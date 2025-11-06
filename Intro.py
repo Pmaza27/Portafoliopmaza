@@ -167,7 +167,7 @@ APPLICATIONS = [
         "icon": "🏭",
         "description": ".",
         "image": "images/cyberphysical_system.png",
-        "link": "https://ficticio.app/cps"
+        "link": "https://imgtotextpmu.streamlit.app/"
     },
     {
         "title": "Reconomiento de Tablero ",
