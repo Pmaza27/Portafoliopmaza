@@ -96,7 +96,7 @@ APPLICATIONS = [
         "title": "Intro",
         "icon": "👀",
         "description": "Primera app.",
-        "image": ("img2.jpeg", width==150),
+        "image": "img2.jpeg",
         "link": "https://intropmaza.streamlit.app/"
     },
     {
