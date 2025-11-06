@@ -136,7 +136,7 @@ APPLICATIONS = [
     },
     {
         "title": "Analisis de texto español",
-        "icon": "🎬",
+        "icon": "📚",
         "description": ".",
         "image": "images/video_audio_transcriber.png",
         "link": "https://ficticio.app/transcriptor"
