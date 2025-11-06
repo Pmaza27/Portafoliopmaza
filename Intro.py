@@ -125,7 +125,7 @@ APPLICATIONS = [
         "icon": "📊",
         "description": "Descubre patrones ocultos y genera visualizaciones interactivas a partir de tus datasets.",
         "image": "images/data_analysis.png",
-        "link": "https://ficticio.app/analisis"
+        "link": "https://anilisisentimiento.streamlit.app/"
     },
     {
         "title": "Analisis de texto inglés)",
@@ -203,7 +203,7 @@ APPLICATIONS = [
 
 # --- 💡 Menú Lateral (Sidebar) ---
 with st.sidebar:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/e/e0/Ai_icon.svg", width=150) # Icono de IA (usando URL pública como ejemplo)
+    st.image(".png", width=150) # Icono de IA (usando URL pública como ejemplo)
     st.markdown("---")
     st.subheader("🤖 ¿Qué es la Inteligencia Artificial?")
     st.markdown("""
