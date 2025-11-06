@@ -118,7 +118,7 @@ APPLICATIONS = [
         "icon": "📹",
         "description": "Digitaliza documentos e imágenes instantáneamente. Esta aplicación utiliza visión por computadora y modelos de IA para extraer texto editable de cualquier imagen o PDF con precisión. Ideal para automatizar la entrada de datos y convertir archivos estáticos en información dinámica.",
         "image": "images/object_recognition.png",
-        "link": "https://ficticio.app/objetos"
+        "link": "https://ocrudio.streamlit.app/"
     },
     {
         "title": "Análisis de Sentimiento",
