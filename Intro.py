@@ -123,7 +123,7 @@ APPLICATIONS = [
     {
         "title": "Análisis de Sentimiento",
         "icon": "📊",
-        "description": "Descubre patrones ocultos y genera visualizaciones interactivas a partir de tus datasets.",
+        "description": "Analiza sentimiento, subjetividad y palabras clave con una interfaz moderna.",
         "image": "images/data_analysis.png",
         "link": "https://anilisisentimiento.streamlit.app/"
     },
