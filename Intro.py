@@ -203,7 +203,7 @@ APPLICATIONS = [
 
 # --- 💡 Menú Lateral (Sidebar) ---
 with st.sidebar:
-    st.image("_(1).jpeg", width=150) # Icono de IA (usando URL pública como ejemplo)
+    st.image("img1.jpeg", width=150) # Icono de IA (usando URL pública como ejemplo)
     st.markdown("---")
     st.subheader("🤖 ¿Qué es la Inteligencia Artificial?")
     st.markdown("""
