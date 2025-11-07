@@ -132,7 +132,7 @@ APPLICATIONS = [
         "icon": "📚",
         "description": ".",
         "image": "images/rag.png",
-        "link": "https://ficticio.app/rag"
+        "link": "https://anlisis-de-texto-ingles-pmu.streamlit.app/"
     },
     {
         "title": "Analisis de texto español",
