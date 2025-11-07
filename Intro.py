@@ -139,7 +139,7 @@ APPLICATIONS = [
         "icon": "📚",
         "description": ".",
         "image": "images/video_audio_transcriber.png",
-        "link": "https://ficticio.app/transcriptor"
+        "link": "https://anilisis-de-texto-espanolpmu.streamlit.app/"
     },
     {
         "title": "Reconocimiento de gestos (Yolo",
