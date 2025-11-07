@@ -171,8 +171,8 @@ APPLICATIONS = [
     },
     {
         "title": "Reconocimiento de Tablero",
-        "icon": "📉",
-        "description": "Clasifica y extrae la información visual de un tablero de control (dashboard) o gráfico.",
+        "icon": ":🎨",
+        "description": "Clasifica y extrae la información visual de un tablero de gráfico.",
         "image": "images/cyberphysical_system.png",
         "link": "https://tableropjmu.streamlit.app/"
     },
