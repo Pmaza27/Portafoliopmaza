@@ -146,7 +146,7 @@ APPLICATIONS = [
         "icon": "✋",
         "description": "Identifica y clasifica movimientos corporales y gestos en tiempo real utilizando el modelo YOLO (You Only Look Once).",
         "image": "images/image_analysis.png",
-        "link": "https://yolopmu.streamlit.app/"
+        "link": ""
     },
     {
         "title": "Reconocimiento de Objetos",
