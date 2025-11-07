@@ -94,112 +94,110 @@ st.markdown(custom_css, unsafe_allow_html=True)
 APPLICATIONS = [
     {
         "title": "Intro",
-        "icon": "👀",
-        "description": "Primera app.",
+        "icon": "🚀",
+        "description": "Bienvenida y punto de partida de nuestro portafolio de demos de Inteligencia Artificial.",
         "image": "img2.jpeg",
         "link": "https://intropmaza.streamlit.app/"
     },
     {
         "title": "Conversión de Texto a Voz (TTS)",
-        "icon": "🎙️",
-        "description": "Transforma cualquier texto escrito en un audio de voz natural y realista.",
+        "icon": "🗣️",
+        "description": "Convierte texto escrito en audio natural y realista. Ideal para audiolibros, accesibilidad o asistentes virtuales.",
         "image": "images/text_to_speech.png",
         "link": "https://texttoaudiopjmu.streamlit.app/"
     },
     {
         "title": "Conversión de Voz a Texto (STT)",
-        "icon": "📝",
-        "description": "Convierte archivos de audio o voz en tiempo real a texto editable con alta precisión.",
+        "icon": "🎤",
+        "description": "Transcribe audio o voz en tiempo real a texto editable con alta precisión.",
         "image": "images/speech_to_text.png",
         "link": "https://traductorpjmu.streamlit.app/"
     },
     {
         "title": "Interfaz OCR",
-        "icon": "📹",
-        "description": "Digitaliza documentos e imágenes instantáneamente. Esta aplicación utiliza visión por computadora y modelos de IA para extraer texto editable de cualquier imagen o PDF con precisión. Ideal para automatizar la entrada de datos y convertir archivos estáticos en información dinámica.",
+        "icon": "📄",
+        "description": "Digitaliza documentos al instante, extrayendo texto editable de imágenes y PDFs mediante visión por computadora.",
         "image": "images/object_recognition.png",
         "link": "https://ocrudio.streamlit.app/"
     },
     {
         "title": "Análisis de Sentimiento",
-        "icon": "📊",
-        "description": "Analiza sentimiento, subjetividad y palabras clave con una interfaz moderna.",
+        "icon": "💖",
+        "description": "Mide la emoción detrás de un texto. Analiza sentimiento, subjetividad y palabras clave de forma rápida.",
         "image": "images/data_analysis.png",
         "link": "https://anilisisentimiento.streamlit.app/"
     },
     {
-        "title": "Analisis de texto inglés)",
-        "icon": "📚",
-        "description": ".",
+        "title": "Analisis de Texto (Inglés)",
+        "icon": "🇺🇸",
+        "description": "Herramienta de Procesamiento de Lenguaje Natural (PLN) dedicada al análisis profundo de textos en inglés.",
         "image": "images/rag.png",
         "link": "https://anlisis-de-texto-ingles-pmu.streamlit.app/"
     },
     {
-        "title": "Analisis de texto español",
-        "icon": "📚",
-        "description": ".",
+        "title": "Analisis de Texto (Español)",
+        "icon": "🇪🇸",
+        "description": "Herramienta de Procesamiento de Lenguaje Natural (PLN) dedicada al análisis profundo de textos en español.",
         "image": "images/video_audio_transcriber.png",
         "link": "https://anilisis-de-texto-espanolpmu.streamlit.app/"
     },
     {
-        "title": "Reconocimiento de gestos (Yolo",
-        "icon": "🖼️",
-        "description": "Clasifica, segmenta y extrae información valiosa de cualquier archivo de imagen.",
+        "title": "Reconocimiento de Gestos (Yolo)",
+        "icon": "✋",
+        "description": "Identifica y clasifica movimientos corporales y gestos en tiempo real utilizando el modelo YOLO (You Only Look Once).",
         "image": "images/image_analysis.png",
         "link": "https://ficticio.app/analisis_img"
     },
     {
-        "title": "Reconocimiento de objetos",
-        "icon": "🧠",
-        "description": "",
+        "title": "Reconocimiento de Objetos",
+        "icon": "📦",
+        "description": "Detecta, localiza y clasifica múltiples objetos dentro de una imagen o stream de video.",
         "image": "images/model_training.png",
         "link": "https://ficticio.app/entrenamiento"
     },
     {
         "title": "Chat PDF",
-        "icon": "🏭",
-        "description": ".",
+        "icon": "💬",
+        "description": "Interactúa y haz preguntas sobre el contenido de tus documentos PDF utilizando modelos de IA generativa.",
         "image": "images/cyberphysical_system.png",
-        "link": "https://ficticio.app/cps"
-    },   
+        "link": "https://chatpdfpmu.streamlit.app/"
+    },    
     {
-        "title": "Imagen to text",
-        "icon": "🏭",
-        "description": ".",
+        "title": "Imagen a Texto",
+        "icon": "📸",
+        "description": "Describe el contenido de cualquier imagen y genera una descripción textual precisa utilizando modelos multimodales.",
         "image": "images/cyberphysical_system.png",
         "link": "https://imgtotextpmu.streamlit.app/"
     },
     {
-        "title": "Reconomiento de Tablero ",
-        "icon": "🏭",
-        "description": ".",
+        "title": "Reconocimiento de Tablero",
+        "icon": "📉",
+        "description": "Clasifica y extrae la información visual de un tablero de control (dashboard) o gráfico.",
         "image": "images/cyberphysical_system.png",
         "link": "https://tableropjmu.streamlit.app/"
     },
     {
-        "title": "Apliación Tablero ",
-        "icon": "🏭",
-        "description": ".",
+        "title": "Aplicación Tablero",
+        "icon": "🖥️",
+        "description": "Plataforma interactiva para visualización y seguimiento de datos en tiempo real (BI / Dashboard).",
         "image": "images/cyberphysical_system.png",
         "link": "https://tablerointeligente-w9afexj9dbqdpqf92qef7m.streamlit.app/"
-    },  
+    },    
     {
-        "title": "Control MQTT ",
-        "icon": "🏭",
-        "description": ".",
+        "title": "Control MQTT",
+        "icon": "🌐",
+        "description": "Interfaz para monitorear y controlar dispositivos IoT mediante el protocolo de mensajería MQTT.",
         "image": "images/cyberphysical_system.png",
-        "link": "https://ficticio.app/cps"
-    }, 
+        "link": "https://control-mqtt-pmaza.streamlit.app/"
+    },    
     {
-        "title": "Control Voz MQTT ",
-        "icon": "🎙️",
-        "description": ".",
+        "title": "Control Voz MQTT",
+        "icon": "🔊",
+        "description": "Sistema de control ciberfísico que permite enviar comandos MQTT a dispositivos IoT usando la voz.",
         "image": "images/cyberphysical_system.png",
         "link": "https://ctrlvoicepmaza.streamlit.app/"
     }
-    
 ]
-
 
 # --- 💡 Menú Lateral (Sidebar) ---
 with st.sidebar:
