@@ -153,7 +153,7 @@ APPLICATIONS = [
         "icon": "📦",
         "description": "Detecta, localiza y clasifica múltiples objetos dentro de una imagen o stream de video.",
         "image": "images/model_training.png",
-        "link": "https://ficticio.app/entrenamiento"
+        "link": ""
     },
     {
         "title": "Chat PDF",
